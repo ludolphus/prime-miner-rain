@@ -1,0 +1,54 @@
+body {
+    font-family: -apple-system,'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #1ee618;
+    background: radial-gradient(circle, rgb(48, 59, 51) 40%, rgb(0, 0, 0) 100%);
+    font-size: 3rem;
+    overflow: hidden;
+}
+.item {
+    position: absolute;
+    top: -50px;
+}
+.prime{font-size: 2rem;_vertical-align: middle;
+    left:5px;position: absolute;top:70px;
+    display: inline-block;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+}
+:root {--accent: #1ee618;}
+h1 {
+    z-index: 777;
+    position: relative;
+    font-size: clamp(2rem, 6vw + 1rem, 8rem);
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: "Tilt Neon", sans-serif;
+    font-weight: 1000;
+    color: var(--accent);
+    text-align: center;
+    margin: 0;
+}
+h1 span, h2 span {
+    --shadow: color-mix(in lch, var(--accent) 90%, hsl(0 0% 100% / 0.5));
+    color: transparent;
+    -webkit-text-stroke: 0.015em var(--accent);
+    filter:
+    drop-shadow(0.02em 0.02em 0.1em hsl(0 0% 100% / 0.25))
+    drop-shadow(0.02em 0.02em 0.2em var(--accent))
+    drop-shadow(0.02em 0.02em 0.6em var(--shadow))
+    brightness(1.25);
+    user-select: none;
+}
+h2 {
+    font-family: "Tilt Neon", sans-serif;
+    position: relative;
+    z-index: 777;
+    margin: 0;
+    text-align: center;
+}
+#wrapper {display: grid;place-items: center;width: 100vw; height: 100vh;}
+#banner {width: auto;height: auto;}
+@media (max-width: 768px) {
+    body {font-size: 2rem;}
+    .prime {font-size: 1rem;}
+}
